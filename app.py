@@ -31,9 +31,14 @@ def data():
         x=""
         immagine=""
         if IMC>25:
-            x="sottopeso"
-            immagine="../../static/img/"
-
+            x="sovrappeso"
+            immagine="../static/img/sovrappeso"
+        elif IMC>24.9 and IMC<18.5:
+            x="normopeso"
+            immagine="../static/img/normopeso"
+        elif IMC < 18.4:
+             x="sottopeso"
+            immagine="../static/img/sottopeso"
     else:
         nome = request.form['nome']
         altezza =  float(request.form['altezza'])
